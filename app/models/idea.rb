@@ -8,4 +8,8 @@ class Idea < ActiveRecord::Base
   :createdDate
   :updatedDate
 
+  def self.search(query)
+    where("title like ?", "%#{query}%")
+  end
+
 end

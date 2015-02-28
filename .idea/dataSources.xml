@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2665826089">
+    <data-source source="LOCAL" name="Rails LikeMinds: development" uuid="4f5f8b32-bb0e-4b1c-a938-028a877f4c34">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/LikeMinds_development</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails LikeMinds: test" uuid="dfc18daa-78d6-4a99-94c0-77fa578e2959">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/LikeMinds_test</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails LikeMinds: production" uuid="36ef2e20-ab59-47e6-9233-334af8952f3b">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/LikeMinds_production</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

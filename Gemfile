@@ -38,6 +38,14 @@ gem 'gravatar_image_tag'
 
 gem "paperclip", "~> 4.2"
 
+gem 'bootstrap-sass', '~> 3.3.3'
+
+group :development do
+  gem "better_errors"
+end
+
+gem "binding_of_caller"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails LikeMinds: development" uuid="4f5f8b32-bb0e-4b1c-a938-028a877f4c34">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails LikeMinds: test" uuid="dfc18daa-78d6-4a99-94c0-77fa578e2959">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails LikeMinds: production" uuid="36ef2e20-ab59-47e6-9233-334af8952f3b">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

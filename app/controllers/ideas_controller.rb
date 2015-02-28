@@ -12,6 +12,14 @@ class IdeasController < ApplicationController
     respond_with(@idea)
   end
 
+  def search
+    if params[:search]
+      @Ideas = Idea.search(params[:search]).order("created_at DESC")
+    else
+      @Ideas = Idea.all.order('created_at DESC')
+    end
+  end
+
   def new
     @idea = Idea.new
     respond_with(@idea)
@@ -26,11 +34,12 @@ class IdeasController < ApplicationController
   end
 
   def create
-    #@idea.user = User.new
     @idea = Idea.new(idea_params)
     @idea.user = current_user
-    #@idea = current_user.ideas.build(params[:ideas])
     @idea.save
+
+    flash[:notice] = "Your idea has been posted successfully."
+
     respond_with(@idea)
   end
 
@@ -52,4 +61,5 @@ class IdeasController < ApplicationController
     def idea_params
       params.require(:idea).permit(:title, :category, :content, :user_id, :createdAt, :updatedAt)
     end
+
 end

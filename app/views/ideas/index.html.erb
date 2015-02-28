@@ -1,12 +1,11 @@
 <h1>Listing ideas</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Title</th>
       <th>Category</th>
       <th>Content</th>
-      <th>Userid</th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,7 +20,6 @@
         <td><%= idea.title %></td>
         <td><%= idea.category %></td>
         <td><%= idea.content %></td>
-        <td><%= idea.user_id %></td>
 
         <td><%= link_to 'Show', idea %></td>
         <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
