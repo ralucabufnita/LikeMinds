@@ -5,43 +5,90 @@
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
 
-<ul class="nav nav-tabs" role="tablist">
-  <% if user_signed_in? %>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand page-scroll" href="#page-top">Like Minds</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <% if user_signed_in? %>
       <li><%= link_to "Like Minds", root_path %></li>
       <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
       <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-      <li><%= link_to "Post your Idea", new_idea_path %></li>
-      <li><%= link_to "Your Ideas", ideas_path %></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            Ideas
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li><%= link_to "Manage your Ideas", ideas_path %></li>
+          <li><%= link_to "Post an Idea", new_idea_path %></li>
+          <li><%= link_to "Browse Ideas", ideas_forum_path %> </li>
+        </ul>
+      </li>
       <li class="signed-in-padding pull-right">Logged In As <%= current_user.email %></li>
   <% else %>
-      <li><%= link_to "Like Minds", root_path %></li>
-      <li><%= link_to "Sign up", new_user_registration_path %></li>
-      <li><%= link_to "Login", new_user_session_path %></li>
-      <li><%= link_to "About Us" %></li>
+      <li><%= link_to "Sign up", class: "page-scroll", "href" => "#signup-section", id: "signupNavLink" %></li>
+      <li><%= link_to "Login", "#login", id: "loginBtn", "data-toggle" => "modal",  "data-targert" => "loginModal" %></li>
+      <li><%= link_to "About Us", class: "page-scroll", "href" => "#about" %></li>
   <% end %>
 </ul>
-
+      </div>
+    </div>
+  </nav>
 <% if user_signed_in? %>
     <div class="col-xs-offset-8 padding-top-15">
       <%= render "ideas/search" %>
     </div>
     <hr>
 <% end %>
-
 <div class="container-fluid">
-
   <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
+      <div class="alert alert-success" role="alert">
+        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+        <span class="sr-only">Notice:</span>
+        <%= notice %>
+      </div>
   <% elsif alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+      <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        <%= alert %>
+      </div>
   <% end %>
+
+  <%= render "devise/registrations/login_modal" %>
 
   <%= yield %>
 
 </div>
+
+<script type="text/javascript">
+    $(".dropdown-menu li a").click(function(){
+        var selText = $(this).text();
+        $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+    });
+
+   $('#loginBtn').click(function() {
+       $('#loginModal').modal();
+   });
+
+
+</script>
 
 </body>
 </html>

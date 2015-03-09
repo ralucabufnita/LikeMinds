@@ -46,6 +46,20 @@ end
 
 gem "binding_of_caller"
 
+gem 'twitter'
+gem 'json'
+gem 'airbrake'
+gem 'koala'
+gem 'linkedin'
+gem 'omniauth'
+gem 'omniauth-oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-linkedin'
+gem 'omniauth-twitter'
+gem 'font-awesome-sass'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

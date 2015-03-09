@@ -8,6 +8,7 @@ class RegistrationsController::RegistrationsController < Devise::RegistrationsCo
     # GET /resource/sign_up
     def new
       build_resource({})
+
       set_minimum_password_length
       yield resource if block_given?
       respond_with self.resource
@@ -147,6 +148,6 @@ class RegistrationsController::RegistrationsController < Devise::RegistrationsCo
     def translation_scope
       'devise.registrations'
     end
-  end
 
+  end
 end

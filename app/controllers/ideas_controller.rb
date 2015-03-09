@@ -12,6 +12,11 @@ class IdeasController < ApplicationController
     respond_with(@idea)
   end
 
+  def forum
+    @Ideas = Idea.Take(10)
+    respond_with(@Ideas)
+  end
+
   def search
     if params[:search]
       @Ideas = Idea.search(params[:search]).order("created_at DESC")

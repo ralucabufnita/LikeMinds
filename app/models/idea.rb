@@ -1,12 +1,10 @@
 class Idea < ActiveRecord::Base
   belongs_to :user
 
-  :title
-  :category
-  :content
-  :user_id
-  :createdDate
-  :updatedDate
+  validates :title, presence: true
+  validates :category, presence: true
+  validates :content, presence: true
+  validates :user_id, presence: true
 
   def self.search(query)
     where("title like ?", "%#{query}%")

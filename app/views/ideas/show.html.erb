@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+ <%= image_tag @idea.user.avatar.url(:thumb), class: 'img img-circle' %>
+
 <p>
   <strong>Title:</strong>
   <%= @idea.title %>
@@ -24,6 +26,23 @@
   <strong>Update Date:</strong>
   <%= @idea.updated_at %>
 </p>
+
+
+  <div class="col=xs=6">
+  <i class="fa fa-facebook"></i>
+
+
+  <i class="fa fa-linkedin"></i>
+
+
+  <i class="fa fa-pinterest"></i>
+
+
+  <i class="fa fa-twitter"></i>
+
+
+  <i class="fa fa-youtube"></i>
+  </div>
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>
