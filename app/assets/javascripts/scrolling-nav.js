@@ -12,22 +12,22 @@ $(window).scroll(function() {
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
-//    $('a.page-scroll').bind('click', function(event) {
-//        var $anchor = $(this);
-//        $('html, body').stop().animate({
-//            scrollTop: $($anchor.attr('href')).offset().top
-//        }, 1500, 'easeInOutExpo');
-//        event.preventDefault();
-//    });
-
-    var stepsButton = $('#stepsBtn');
-
-    $(stepsButton).bind('click','.page-scroll', function(e) {
+    $('a.page-scroll').bind('click', function(e) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+        e.preventDefault();
+    });
+
+    var stepsButton = $('#stepsBtn');
+
+    $(stepsButton).bind('click', function(e) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        e.preventDefault();
     });
 
     var signupButton = $('#signupBtn');
@@ -36,8 +36,7 @@ $(function() {
 
     if ($(signupDiv).not(':hidden')) {
         $(signupDiv).hide();
-    };
-
+    }
     $(signupButton).on('click', function () {
         $(signupDiv).slideDown('slow').delay(10).promise().done(
             function () {
@@ -48,12 +47,12 @@ $(function() {
             });
     });
 
-    $(signupNavLink).on('click', function () {
-                var $anchor = $(signupNavLink);
-                $('html, body').stop().animate({
-                    scrollTop: $($anchor.attr('href')).offset().top
-                }, 1500, 'easeInOutExpo');//.promise().done(
-                    //$(signupDiv).slideDown('slow').delay(10))
-    });
+    //$(signupNavLink).on('click', function () {
+    //            var $anchor = $(signupNavLink);
+    //            $('html, body').stop().animate({
+    //                scrollTop: $($anchor.attr('href')).offset().top
+    //            }, 1500, 'easeInOutExpo');//.promise().done(
+    //                //$(signupDiv).slideDown('slow').delay(10))
+    //});
 
 });

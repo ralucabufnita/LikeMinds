@@ -5,23 +5,19 @@
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/LikeMinds_development</jdbc-url>
-      <user-name>root</user-name>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails LikeMinds: test" uuid="dfc18daa-78d6-4a99-94c0-77fa578e2959">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/LikeMinds_test</jdbc-url>
-      <user-name>root</user-name>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails LikeMinds: production" uuid="36ef2e20-ab59-47e6-9233-334af8952f3b">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/LikeMinds_production</jdbc-url>
-      <user-name>root</user-name>
       <libraries />
     </data-source>
   </component>
 </project>
-
