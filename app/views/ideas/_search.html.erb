@@ -1,12 +1,9 @@
-<%= form_tag(ideas_path, :method => "get", id: "search-form", class: "form-horizontal") do %>
-    <div class="row">
-      <div class="col-sm-9">
-        <div class="input-group">
+<%= form_tag(ideas_path, :method => "get", id: "search-form") do %>
+    <div class="input-group">
           <%= text_field_tag :search, params[:search], placeholder: "Search By Title", class: "form-control" %>
           <span class="input-group-btn">
         <%= submit_tag "Search", :name => nil, class: "btn btn-success" %>
       </span>
         </div><!-- /input-group -->
-      </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
 <% end %>
+</div>

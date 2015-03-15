@@ -37,15 +37,27 @@ $(function() {
     if ($(signupDiv).not(':hidden')) {
         $(signupDiv).hide();
     }
-    $(signupButton).on('click', function () {
-        $(signupDiv).slideDown('slow').delay(10).promise().done(
-            function () {
-                var $anchor = $(signupButton);
-                $('html, body').stop().animate({
-                    scrollTop: $($anchor.attr('href')).offset().top
-                }, 1500, 'easeInOutExpo');
-            });
-    });
+
+    //$(signupButton).on('click', function () {
+    //    $(signupDiv).slideDown('slow').delay(5).promise().done(
+    //        function () {
+    //            var $anchor = $(signupButton);
+    //            $('html, body').stop().animate({
+    //                scrollTop: $($anchor.attr('href')).offset().top
+    //            }, 1500, 'easeInOutExpo');
+    //        });
+    //});
+
+     $(signupButton).on('click', function () {
+        var $anchor = $(signupButton);
+        $('html, body').animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        },
+            1500,
+            'easeInOutExpo').promise().done($(signupDiv).slideDown('slow').delay());
+     });
+
+    //.promise().done($(signupDiv).slideDown('slow').delay(3500))
 
     //$(signupNavLink).on('click', function () {
     //            var $anchor = $(signupNavLink);

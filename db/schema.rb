@@ -11,59 +11,73 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309052802) do
+ActiveRecord::Schema.define(version: 20150314005920) do
 
-  create_table "categories", force: true do |t|
-    t.string   "category"
-    t.boolean  "active"
+  create_table "categories", force: :cascade do |t|
+    t.string   "category",  limit: 255
+    t.boolean  "active",    limit: 1
     t.datetime "createdAt"
     t.datetime "updatedAt"
   end
 
-  create_table "ideas", force: true do |t|
-    t.string   "title"
-    t.string   "category"
-    t.text     "content"
-    t.integer  "user_id"
+  create_table "ideas", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.string   "category",    limit: 255
+    t.text     "content",     limit: 65535
+    t.integer  "user_id",     limit: 4
     t.datetime "createdDate"
     t.datetime "updatedDate"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+  create_table "interests", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "idea_id",    limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "interests", ["idea_id"], name: "index_interests_on_idea_id", using: :btree
+  add_index "interests", ["user_id"], name: "index_interests_on_user_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  limit: 255, default: "", null: false
+    t.string   "encrypted_password",     limit: 255, default: "", null: false
+    t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+    t.string   "current_sign_in_ip",     limit: 255
+    t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
+    t.string   "avatar_file_name",       limit: 255
+    t.string   "avatar_content_type",    limit: 255
+    t.integer  "avatar_file_size",       limit: 4
     t.datetime "avatar_updated_at"
-    t.string   "has_attached_file"
-    t.string   "firstName"
-    t.string   "lastName"
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zipCode"
-    t.string   "phone"
-    t.string   "name"
-    t.string   "username"
-    t.string   "location"
-    t.string   "provider"
-    t.string   "uid"
+    t.string   "has_attached_file",      limit: 255
+    t.string   "firstName",              limit: 255
+    t.string   "lastName",               limit: 255
+    t.string   "address",                limit: 255
+    t.string   "city",                   limit: 255
+    t.string   "state",                  limit: 255
+    t.string   "zipCode",                limit: 255
+    t.string   "phone",                  limit: 255
+    t.string   "name",                   limit: 255
+    t.string   "username",               limit: 255
+    t.string   "location",               limit: 255
+    t.string   "provider",               limit: 255
+    t.string   "uid",                    limit: 255
+    t.integer  "ideas_id",               limit: 4
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["ideas_id"], name: "index_users_on_ideas_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "interests", "ideas"
+  add_foreign_key "interests", "users"
 end

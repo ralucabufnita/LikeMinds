@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.2.0'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -32,17 +32,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'devise'
+gem 'devise', '~> 3.4.0'   # or later
 
 gem 'gravatar_image_tag'
 
 gem "paperclip", "~> 4.2"
 
 gem 'bootstrap-sass', '~> 3.3.3'
-
-group :development do
-  gem "better_errors"
-end
 
 gem "binding_of_caller"
 
@@ -58,7 +54,11 @@ gem 'omniauth-github'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin'
 gem 'omniauth-twitter'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.3.2'
+gem 'rake', '~> 10.4.2'
+gem 'i18n', '~> 0.7.0.beta1'
+gem 'multi_json', '~> 1.11.0'
+gem 'activesupport', '~> 4.2.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

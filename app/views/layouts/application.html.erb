@@ -49,15 +49,18 @@
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       </ul>
       </li>
-  <% else %>
-
+            <form class="navbar-form pull-right" role="search">
+              <%= render "ideas/search" %>
+            </form>
+      <% else %>
       <li><a class="page-scroll" href="#signupDivEnd">Sign Up</a></li>
       <li><%= link_to "Login", "#login", id: "loginBtn", "data-toggle" => "modal",  "data-targert" => "loginModal" %></li>
       <li><a class="page-scroll" href="#about">About Us</a></li>
   <% end %>
 </ul>
       </div>
-    </div>
+
+  </div>
   </nav>
 <% if user_signed_in? %>
     <div class="col-xs-offset-8 padding-top-15">

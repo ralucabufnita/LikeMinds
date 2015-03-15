@@ -1,19 +1,24 @@
 <h1>Browse Ideas</h1>
-
-  <% @ideas.each do |idea| %>
-        <div class="col-xs-2"><%= image_tag idea.user.avatar.url(:thumb) %></div>
-        <div class="col-xs-2"><td>Title: <%= idea.title %></td></div>
+    <% @ideas.each do |idea| %>
+    <div class="col-xs-2"><%= image_tag idea.user.avatar.url(:thumb) %></div>
+    <div class="col-xs-2"><td>Title: <%= idea.title %></td></div>
         <div class="-col-xs-6">
-
+            <%= hidden_field_tag idea.id %>
             <% if (idea.category.blank?) %>
                 <h3>Category: Unknown</h3>
             <% else %>
                 <h3>Category:  <%= idea.category %></h3>
             <% end %>
-
         </div>
         <div class="col-xs-12">
-            <p><%= idea.content %></p>
-          <td><%= link_to 'Show', idea, class: 'btn btn-primary' %></td>
+            <p class="show-less">
+              <%= idea.content.truncate_words(10) %>
+              <a class="show-text">Show more</a>
+            </p>
+            <p class="show-more">
+              <%= idea.content[0..10] %>
+            <a class="hide-text">Show less</a>
+              </p>
+          <%= button_to "I'm Interested", ideas_interest_path(:id => idea.id, :idea_id => idea.id, :user_id => idea.user_id) ,class: 'btn btn-primary' %>
         </div>
   <% end %>

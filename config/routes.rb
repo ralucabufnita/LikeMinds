@@ -4,7 +4,11 @@ LikeMinds::Application.routes.draw do
 
   get 'ideas/forum', to: 'ideas#forum'
 
-  resources :ideas
+  post '/ideas/interest', to: 'ideas#interest'
+
+  resources :ideas do
+    resources :interests
+  end
 
   root 'home#index'
 

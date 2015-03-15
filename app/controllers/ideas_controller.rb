@@ -1,5 +1,5 @@
 class IdeasController < ApplicationController
-  before_action :set_idea, only: [:show, :edit, :update, :destroy]
+  before_action :set_idea, only: [:show, :edit, :update, :destroy, :interest]
 
   respond_to :html
 
@@ -13,8 +13,9 @@ class IdeasController < ApplicationController
   end
 
   def forum
-    @Ideas = Idea.Take(10)
-    respond_with(@Ideas)
+    @ideas = Idea.new
+    @ideas = Idea.take(10)
+    respond_with(@ideas)
   end
 
   def search
@@ -30,11 +31,6 @@ class IdeasController < ApplicationController
     respond_with(@idea)
   end
 
-  def forum
-    @ideas = Idea.take(20)
-    respond_with(@ideas)
-  end
-
   def edit
   end
 
@@ -44,7 +40,6 @@ class IdeasController < ApplicationController
     @idea.save
 
     flash[:notice] = "Your idea has been posted successfully."
-
     respond_with(@idea)
   end
 
@@ -53,14 +48,37 @@ class IdeasController < ApplicationController
     respond_with(@idea)
   end
 
+  def interest
+    @interest = Interest.new
+    @interest.user_id = current_user.id
+    @interest.idea_id = @idea.id
+
+    # TODO: Make this work. Issue in relationships
+    #@interest = current_user.ideas.interest.create(params[:interest])
+
+    if @interest.save
+      IdeaMailer.create_interest_notice(current_user).deliver_later
+    end
+
+    @ideas = Idea.take(10)
+
+    flash[:notice] = "A message has been sent to the poster."
+    render "ideas/forum"
+  end
+
   def destroy
     @idea.destroy
     respond_with(@idea)
   end
 
   private
+
     def set_idea
       @idea = Idea.find(params[:id])
+    end
+
+    def interest_params
+      params.require(:interest).permit(:user_id, :idea_id)
     end
 
     def idea_params
