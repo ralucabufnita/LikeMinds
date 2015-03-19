@@ -9,6 +9,14 @@ class IdeasController < ApplicationController
   end
 
   def show
+
+    now = Date.today
+    before = Date.today + 2.days
+
+    @interest = Interest.new
+
+    @difference_in_days = (before - now).to_i
+
     respond_with(@idea)
   end
 
@@ -48,23 +56,13 @@ class IdeasController < ApplicationController
     respond_with(@idea)
   end
 
-  def interest
-    @interest = Interest.new
-    @interest.user_id = current_user.id
-    @interest.idea_id = @idea.id
+  #def interest
+    #@interest = Interest.new
+    # @interest.user_id = current_user.id
+    # @interest.idea_id = @idea.id
 
-    # TODO: Make this work. Issue in relationships
-    #@interest = current_user.ideas.interest.create(params[:interest])
-
-    if @interest.save
-      IdeaMailer.create_interest_notice(current_user).deliver_later
-    end
-
-    @ideas = Idea.take(10)
-
-    flash[:notice] = "A message has been sent to the poster."
-    render "ideas/forum"
-  end
+   # render "interest/show"
+  #end
 
   def destroy
     @idea.destroy
@@ -75,10 +73,6 @@ class IdeasController < ApplicationController
 
     def set_idea
       @idea = Idea.find(params[:id])
-    end
-
-    def interest_params
-      params.require(:interest).permit(:user_id, :idea_id)
     end
 
     def idea_params

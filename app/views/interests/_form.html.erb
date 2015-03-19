@@ -1,0 +1,9 @@
+<%= form_for ([@idea, Interest.new()]) do |f| %>
+    <%= f.hidden_field :idea_id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.label :Comment %>
+    <%= f.text_area :Comment %>
+    <%= f.label :isInterested %>
+    <%= f.check_box :IsInterested %>
+    <%= f.submit  %>
+<% end %>

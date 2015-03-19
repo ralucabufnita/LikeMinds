@@ -4,6 +4,8 @@ class Idea < ActiveRecord::Base
   has_many :interests
   has_many :users, through: :ideas
 
+  accepts_nested_attributes_for :interests
+
   :title
   :category
   :content

@@ -40,6 +40,10 @@ gem "paperclip", "~> 4.2"
 
 gem 'bootstrap-sass', '~> 3.3.3'
 
+group :development do
+  gem "better_errors"
+end
+
 gem "binding_of_caller"
 
 gem 'twitter'

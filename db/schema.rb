@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150314005920) do
+ActiveRecord::Schema.define(version: 20150318012900) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "category",  limit: 255
@@ -32,14 +32,28 @@ ActiveRecord::Schema.define(version: 20150314005920) do
   end
 
   create_table "interests", force: :cascade do |t|
-    t.integer  "user_id",    limit: 4
-    t.integer  "idea_id",    limit: 4
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.integer  "user_id",      limit: 4
+    t.integer  "idea_id",      limit: 4
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "IsInterested", limit: 1
+    t.text     "Comment",      limit: 65535
   end
 
   add_index "interests", ["idea_id"], name: "index_interests_on_idea_id", using: :btree
   add_index "interests", ["user_id"], name: "index_interests_on_user_id", using: :btree
+
+  create_table "user_details", force: :cascade do |t|
+    t.string   "nickname",   limit: 255
+    t.integer  "likes",      limit: 4
+    t.integer  "user_id",    limit: 4
+    t.integer  "rating",     limit: 4
+    t.integer  "postCount",  limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "user_details", ["user_id"], name: "index_user_details_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

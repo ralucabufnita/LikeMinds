@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
+#  has_one :user_detail
+
   has_many :interests
-  has_many :ideas
 
   # Regex
   TEMP_EMAIL_PREFIX = 'change@me'

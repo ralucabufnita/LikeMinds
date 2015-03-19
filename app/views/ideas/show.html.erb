@@ -19,12 +19,11 @@
 
 <p>
   <strong>Created Date:</strong>
-  <%= @idea.created_at%>
+  <%= @idea.created_at.to_date%>
 </p>
 
 <p>
-  <strong>Update Date:</strong>
-  <%= @idea.updated_at %>
+  Last Updated in <%= @difference_in_days %> days ago.
 </p>
 
 
@@ -43,6 +42,12 @@
 
   <i class="fa fa-youtube"></i>
   </div>
+
+<div class="col-xs-6">
+
+    <%= render "interests/form", collection: @idea %>
+
+</div>
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>

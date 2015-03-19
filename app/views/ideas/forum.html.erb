@@ -19,6 +19,6 @@
               <%= idea.content[0..10] %>
             <a class="hide-text">Show less</a>
               </p>
-          <%= button_to "I'm Interested", ideas_interest_path(:id => idea.id, :idea_id => idea.id, :user_id => idea.user_id) ,class: 'btn btn-primary' %>
+          <%= link_to "I'm Interested", idea_path(idea), class: 'btn btn-primary' %>
         </div>
   <% end %>
