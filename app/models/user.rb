@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 #  has_one :user_detail
 
   has_many :interests
+  has_many :ideas
 
   # Regex
   TEMP_EMAIL_PREFIX = 'change@me'
@@ -24,6 +25,10 @@ class User < ActiveRecord::Base
   :zipCode
   :phone
   :location
+  :created_at
+  :current_sign_in_at
+  :last_sign_in_at
+  :sign_in_count
 
 
   def self.from_omniauth(auth)

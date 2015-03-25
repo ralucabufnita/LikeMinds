@@ -5,6 +5,7 @@ LikeMinds::Application.routes.draw do
   devise_for :user, :controllers => { :omniauth_callbacks => 'omniauth_callbacks' }
 
   get 'ideas/forum', to: 'ideas#forum'
+  get '/user_details/show/:user_id', to: "user_details#show", as: :dashboard
 
   post '/ideas/interest', to: 'ideas#interest'
 

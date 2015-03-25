@@ -12,6 +12,15 @@ class UserDetailsController < ApplicationController
   # GET /user_details/1
   # GET /user_details/1.json
   def show
+      now = current_user.last_sign_in_at.to_date
+      before = Date.today + 2.days
+      @difference_in_days = (before - now).to_i
+
+      @ideaCount = Idea.count(:conditions => ["user_id = ?", current_user.id])
+      @interestCount = Interest.count(:conditions => ["user_id = ?", current_user.id ])
+      @commentCount = User.joins(:interests).select('comment').count
+      @categoryNameCollection = Idea.where('user_id = ?', current_user.id).select('count(category) as categoryCount, category').group('category')
+
       respond_with(@user_detail)
   end
 
@@ -67,9 +76,7 @@ class UserDetailsController < ApplicationController
   private
 
     def set_user_detail
-      #@@user_detail = User.where(id: current_user.id).includes(:user_detail)
       @user_detail = UserDetail.find_by(params[:id])
-
     end
 
     def user_detail_params

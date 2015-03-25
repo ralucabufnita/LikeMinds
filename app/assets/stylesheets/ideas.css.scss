@@ -6,3 +6,26 @@
   display:none;
 
 }
+
+.idea-content {
+  border: 1px black solid;
+}
+
+.idea-content-header {
+  font-size:small;
+  padding-bottom:25px;
+}
+
+.idea-content-body {
+  padding-botton:15px;
+  padding-left:10px;
+  padding-right: 10px;
+  text-align: justify;
+}
+
+.idea-content-footer {
+  border-bottom: 1px grey solid;
+  padding-bottom:5px;
+  padding-top: 105px;
+  padding-left:10px;
+}

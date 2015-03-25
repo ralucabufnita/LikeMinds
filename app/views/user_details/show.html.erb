@@ -1,27 +1,140 @@
-<p>
-  <strong>Nickname:</strong>
-  <%= @user_detail.nickname %>
-</p>
+<div class="dashboard-header">
+<h1><strong>Nickname  </strong><%= @user_detail.nickname %></h1>
+  <ul class="list list-inline">
+    <li>Member Since: <%= @user_detail.created_at.to_date  %></li>
+    <li>Last Seen: <%= current_user.last_sign_in_at.to_date %></li>
+    <li>Days Active <%= @difference_in_days %></li>
+  </ul>
+</div>
+<div class="row padding-top-15">
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="row">
+          <% (1..@user_detail.rating).each do |s| %>
+              <div class="col-xs-2">
+                <i class="fa fa-star fa-4x"></i>
+              </div>
+          <% end %>
+          <div class="col-sm-3 text-right">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <a href="#">
+        <div class="panel-footer">
+          <span class="pull-left">About User Ratings</span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-history fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge"><%= @interestCount %></div>
+            <div>Interests</div>
+          </div>
+        </div>
+      </div>
+      <a href="#">
+        <div class="panel-footer">
+          <span class="pull-left">View your Interest History</span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-pencil-square fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge"><%= @ideaCount %></div>
+            <div>Your Posts</div>
+          </div>
+        </div>
+      </div>
+      <a href="#">
+        <div class="panel-footer">
+          <span class="pull-left">View your Post History</span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-comment fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge"><%= @commentCount %></div>
+            <div>Comments</div>
+          </div>
+        </div>
+      </div>
+      <a href="#">
+        <div class="panel-footer">
+          <span class="pull-left">View your Comment History</span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <i class="fa fa-tags  fa-2x">
+          &nbsp;&nbsp;Tags
+        </i>
+      </div>
+      <div class="panel-body">
+        <%= render "category_tags" %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Likes:</strong>
-  <%= @user_detail.likes %>
-</p>
+<div class="row">
+  <div class="col-lg-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="label label-danger">Pro Only</div>
+        <h4>&nbsp;&nbsp;Analytics & Reporting</h4>
+      </div>
+      <div class="panel-body">
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @user_detail.user_id %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @user_detail.rating %>
-</p>
-
-<p>
-  <strong>Postcount:</strong>
-  <%= @user_detail.postCount %>
-</p>
-
-<%= link_to 'Edit', edit_user_detail_path(@user_detail) %> |
-<%= link_to 'Back', user_details_path %>
+<div class="row">
+  <div class="col-lg-8">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+          <i class="fa fa-angellist fa-2x">
+            &nbsp;&nbsp;Testimonials
+          </i>
+        </div>
+        <div class="panel-body">
+        </div>
+    </div>
+  </div>
+</div>

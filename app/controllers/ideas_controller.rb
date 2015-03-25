@@ -56,14 +56,6 @@ class IdeasController < ApplicationController
     respond_with(@idea)
   end
 
-  #def interest
-    #@interest = Interest.new
-    # @interest.user_id = current_user.id
-    # @interest.idea_id = @idea.id
-
-   # render "interest/show"
-  #end
-
   def destroy
     @idea.destroy
     respond_with(@idea)
