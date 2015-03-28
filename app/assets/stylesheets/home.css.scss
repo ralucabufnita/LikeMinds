@@ -2,6 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Scroll Spy nav easing
+@media(min-width:767px) {
+  .navbar {
+    padding: 20px 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }
+
+  .top-nav-collapse {
+    padding: 0;
+  }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
+of those sections to manage the look and feel of the site. */
+
+.intro-section {
+  height: 100%;
+  padding-top: 150px;
+  text-align: center;
+  background: #fff;
+}
+
+.steps-section {
+  height:400px;
+  padding-top:50px;
+  text-align: center;
+  background: #CCCCCC;
+  color: #999999;
+}
+
+.signup-section {
+  height:100%;
+  padding-top:150px;
+  text-align: center;
+  background: #eee;
+}
+
+.about-section {
+  height: 100%;
+  padding-top: 150px;
+  text-align: center;
+  background: #eee;
+}
+
+
 .padding-top-15 {
   padding:15px 0 0 0;
 }
@@ -54,5 +102,66 @@
 }
 
 .started-logo {
-  margin-bottom: 100px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.started-text {
+  padding-top: 25px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: medium;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: lightseagreen;
+
+  /* width and height can be anything, as long as they're equal */
+}
+
+.steps-number {
+  font-family: 'Arvo', serif;
+  font-size: 50px;
+  color: white;
+}
+
+//.circle-inner {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  bottom: 0;
+//  right: 0;
+//  text-align: center;
+//}
+//
+.score-text {
+  margin: auto;
+  position: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1em;
+//  line-height: 1em;
+//  font-size: 1em;
+}
+//
+//.score-text {
+//  height: 3vw;
+//  line-height: 3vw;
+//  font-size: 3vw;
+//}
+
+.padding-top-10 {
+  padding-top: 5px;
+}
+
+.col-xs-6-centered {
+  padding-top: 25px;
+  position: absolute;
+  left: 45%;
+  right: 0%;
 }
