@@ -1,5 +1,4 @@
 <section id="intro" class="intro-section home-backdrop">
-
   <div class="col-xs-12">
     <h1 class="home-logo">Welcome to Like Minds</h1>
   </div>
@@ -10,7 +9,8 @@
 <section id="steps" class="steps-section">
   <h1 class="col-xs-12 started-logo">How to Get Started</h1>
 <div class="row">
- <div class="col-xs-12">
+  <p class="started-text">Before you can start posting your ideas, sign up for an Account</p>
+  <div class="col-xs-12">
  <div class="col-xs-6-centered">
   <div class="circle circle-border">
     <div class="col-xs-offset-1 padding-top-10">
@@ -19,9 +19,10 @@
       </div>
     </div>
   </div>
-   <span class="clear"></span>
-   <p class="started-text">Before you can start posting your ideas, sign up for an Account</p>
  </div>
+    <div class="col-md-6 col-md-6-centered">
+      <input type="button" id="signupBtn" href="#signupDivEnd" class="btn btn-default extend-btn page-scroll" value="Sign Up"/>
+    </div>
  </div>
  <!--<div class="col-md-offset-7">-->
   <!--<div class="col-xs-2">-->
@@ -36,7 +37,6 @@
  </div>
 </div>
 
-    <input type="button" id="signupBtn" href="#signupDivEnd" class="btn-clear page-scroll" value="Sign Up"/>
 
   <!--<div class="col-xs-4">-->
     <!--Than Post your idea-->
@@ -50,12 +50,11 @@
 </section>
 <section id="signupDiv" class="signup-section">
   <div class="col-xs-12">
-    <h2>Sign Up</h2>
-    <%= render "devise/registrations/form" %>
+    <%= render "users/registrations/form" %>
   </div>
   <hr/>
 </section>
 <div id="signupDivEnd" class="signup-section"></div>
-<section id="about" class="about-section">
-  About Us
-</section>
+<!--<section id="about" class="about-section">-->
+  <!--About Us-->
+<!--</section>-->

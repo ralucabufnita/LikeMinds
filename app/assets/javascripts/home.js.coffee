@@ -31,3 +31,19 @@ $ ->
     $('html, body').animate({ scrollTop: $($anchor.attr('href')).offset().top }, 1500, 'easeInOutExpo').promise().done $(signupDiv).slideDown('slow').delay()
     return
   return
+#  $('#signup-btn').on 'click', (e) ->
+#    $.ajax
+#    url: '/users'
+#    type: 'POST'
+#    beforeSend: (xhr) ->
+#      xhr.setRequestHeader 'X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')
+#      return
+#    data: ->
+#      email: email,
+#      password: password,
+#      password_confirmation: password,
+#      commit : 'Sign up'
+#    success: (response) ->
+#      console.log("Hi")
+#      return
+#    return

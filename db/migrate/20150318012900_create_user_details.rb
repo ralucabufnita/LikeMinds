@@ -7,7 +7,7 @@ class CreateUserDetails < ActiveRecord::Migration
       t.integer :rating
       t.integer :postCount
 
-      t.references :user, index: true
+      t.references :users, index: true
 
       t.timestamps null: false
     end

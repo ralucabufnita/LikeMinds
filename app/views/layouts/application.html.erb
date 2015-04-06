@@ -70,21 +70,28 @@
     <hr>
 <% end %>
 <div class="container-fluid">
+
+  <%= render "users/registrations/login_modal" %>
+
+  <div class="row padding-top-bottom-50"></div>
+
   <% if notice %>
-      <div class="alert alert-success" role="alert">
+      <div class="alert alert-success alert-dismissable" role="alert">
         <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;
+        </span></button>
         <span class="sr-only">Notice:</span>
         <%= notice %>
       </div>
   <% elsif alert %>
-      <div class="alert alert-danger" role="alert">
+      <div class="alert alert-danger alert-dismissable" role="alert">
         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;
+        </span></button>
         <span class="sr-only">Error:</span>
         <%= alert %>
       </div>
   <% end %>
-
-  <%= render "devise/registrations/login_modal" %>
 
   <%= yield %>
 
