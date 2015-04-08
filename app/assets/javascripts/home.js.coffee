@@ -7,20 +7,20 @@ $(window).scroll ->
     $('.navbar-fixed-top').addClass 'top-nav-collapse'
   else
     $('.navbar-fixed-top').removeClass 'top-nav-collapse'
-  return
+
 #jQuery for page scrolling feature - requires jQuery Easing plugin
 $ ->
   $('a.page-scroll').bind 'click', (e) ->
     $anchor = $(this)
     $('html, body').stop().animate { scrollTop: $($anchor.attr('href')).offset().top }, 1500, 'easeInOutExpo'
     e.preventDefault()
-    return
+
   stepsButton = $('#stepsBtn')
   $(stepsButton).bind 'click', (e) ->
     $anchor = $(this)
     $('html, body').stop().animate { scrollTop: $($anchor.attr('href')).offset().top }, 1500, 'easeInOutExpo'
     e.preventDefault()
-    return
+
   signupButton = $('#signupBtn')
   signupDiv = $('#signupDiv')
   signupNavLink = $('#signupNavLink')
@@ -29,8 +29,11 @@ $ ->
   $(signupButton).on 'click', ->
     $anchor = $(signupButton)
     $('html, body').animate({ scrollTop: $($anchor.attr('href')).offset().top }, 1500, 'easeInOutExpo').promise().done $(signupDiv).slideDown('slow').delay()
-    return
-  return
+
+  closeBtn = $('#closeBtn')
+  $(closeBtn).on 'click', ->
+    if $(signupDiv).not(':hidden')
+      $(signupDiv).hide()
 #  $('#signup-btn').on 'click', (e) ->
 #    $.ajax
 #    url: '/users'

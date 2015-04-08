@@ -17,6 +17,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
         set_flash_message :notice, :signed_up if is_flashing_format?
         sign_up(resource_name, resource)
         respond_with resource, location: after_sign_up_path_for(resource)
+
+        @userDetail =  UserDetail.new
+        @userDetail.user_id = resource.id
+        @userDetail.nickname = resource.firstName + " " + resource.lastName
+        if @userDetail.save then
+          after_sign_up_path_for(resource)
+        end
+
       else
         set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_flashing_format?
         expire_data_after_sign_in!
@@ -26,11 +34,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
       clean_up_passwords resource
       set_minimum_password_length
 
-      return "" if resource.errors.empty?
-      flash[:alert] = resource.errors.full_messages.map { |msg| msg }.join
-      flash[:alert] = I18n.t("errors.messages.not_saved",
-                        :count => resource.errors.count,
-                        :resource => resource.class.model_name.human.downcase)
+      flash[:alert] = "<span class='glyphicon glyphicon-exclamation-sign' aria-hidden='true'></span>" + "<strong>" + " There was an error registering" + "</strong>"
+      flash[:alert] = flash[:alert].lines.to_a.concat resource.errors.full_messages
 
       redirect_to root_path(resource)
     end
@@ -69,7 +74,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # The path used after sign up. You need to overwrite this method
   # in your own RegistrationsController.
   def after_sign_up_path_for(resource)
-    after_sign_in_path_for(resource)
+    # after_sign_in_path_for(resource)
+    ideas_forum_path
   end
 
   # The path used after sign up for inactive accounts. You need to overwrite

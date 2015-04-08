@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  background: #DADADA;
+}
+
 // Scroll Spy nav easing
 @media(min-width:767px) {
   .navbar {
@@ -37,25 +41,33 @@ of those sections to manage the look and feel of the site. */
 
 .signup-section {
   height:100%;
-  padding-top: 50px;
+  width: 97%;
+  padding-top: 20px;
+  margin-left: 15px;
   text-align: center;
   background: #eee;
+  border: 1px;
+  border-bottom-right-radius: 2em;
+  border-bottom-left-radius: 2em;
 }
 
 .about-section {
   height: 100%;
-  padding-top: 150px;
+  padding-top: 20px;
   text-align: center;
-  background: #eee;
+  background: #3366FF;
 }
 
+#signupDivEnd {
+  background: #DADADA;
+}
 
 .padding-top-15 {
   padding:15px 0 0 0;
 }
 
 .padding-top-bottom-50 {
-  padding: 50px 0 0 50px;
+  margin: 75px 0 0 0;
 }
 
 
@@ -70,6 +82,14 @@ of those sections to manage the look and feel of the site. */
 
 .padding-bottom {
   padding-bottom:5px;
+}
+
+.padding-bottom-7 {
+  padding-bottom: 24px;
+}
+
+.padding-bottom {
+  padding-bottom:20px;
 }
 
 .search-row-fill {
@@ -101,7 +121,7 @@ of those sections to manage the look and feel of the site. */
 .home-backdrop {
   background: image_url('home-backdrop.jpg') no-repeat center center;
   height: 800px;
-  margin-top: 100px;
+//  margin-top: 100px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -130,7 +150,6 @@ of those sections to manage the look and feel of the site. */
   width: 100px;
   height: 100px;
   background-color: lightseagreen;
-
   /* width and height can be anything, as long as they're equal */
 }
 
@@ -140,15 +159,6 @@ of those sections to manage the look and feel of the site. */
   color: white;
 }
 
-//.circle-inner {
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  bottom: 0;
-//  right: 0;
-//  text-align: center;
-//}
-//
 .score-text {
   margin: auto;
   position: inherit;
@@ -160,12 +170,18 @@ of those sections to manage the look and feel of the site. */
 //  line-height: 1em;
 //  font-size: 1em;
 }
-//
-//.score-text {
-//  height: 3vw;
-//  line-height: 3vw;
-//  font-size: 3vw;
-//}
+
+.registration-form-backdrop {
+  @extend .container-fluid;
+//  background-color: rgba(255, 255, 255, 0.5);
+//  filter:alpha(opacity=20);
+}
+
+.registration-form {
+  @extend .col-xs-12;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 
 .padding-top-10 {
   padding-top: 5px;
@@ -183,4 +199,13 @@ of those sections to manage the look and feel of the site. */
   position: absolute;
   left:  0%;
   right: 0%;
+}
+
+.col-8-form {
+  @extend .col-xs-8;
+  background:#666666;
+}
+
+.row-margin {
+  margin-top: 90px;
 }

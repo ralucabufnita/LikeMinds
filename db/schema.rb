@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321004558) do
+ActiveRecord::Schema.define(version: 20150407021028) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "category",  limit: 255
@@ -44,14 +44,11 @@ ActiveRecord::Schema.define(version: 20150321004558) do
   add_index "interests", ["user_id"], name: "index_interests_on_user_id", using: :btree
 
   create_table "user_details", force: :cascade do |t|
-    t.string   "nickname",    limit: 255
-    t.integer  "likes",       limit: 4
-    t.integer  "user_id",     limit: 4
-    t.integer  "rating",      limit: 4
-    t.integer  "postCount",   limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.text     "testimonial", limit: 65535
+    t.string   "nickname",   limit: 255
+    t.integer  "user_id",    limit: 4
+    t.integer  "rating",     limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "user_details", ["user_id"], name: "index_user_details_on_user_id", using: :btree

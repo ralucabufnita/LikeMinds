@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nickname: MyString
-  likes: 1
-  user_id: 1
-  rating: 1
-  postCount: 1
+  id: 5
+  nickname: MyStrin
+  user_id: 100
+  rating: 3
 
 two:
-  nickname: MyString
-  likes: 1
-  user_id: 1
-  rating: 1
-  postCount: 1
+  id: 6
+  nickname: MyString2
+  user_id: 200
+  rating: 2

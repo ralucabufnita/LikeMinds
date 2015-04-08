@@ -18,10 +18,10 @@
     <% @user_details.each do |user_detail| %>
       <tr>
         <td><%= user_detail.nickname %></td>
-        <td><%= user_detail.likes %></td>
+
         <td><%= user_detail.user_id %></td>
         <td><%= user_detail.rating %></td>
-        <td><%= user_detail.postCount %></td>
+
         <td><%= link_to 'Show', user_detail %></td>
         <td><%= link_to 'Edit', edit_user_detail_path(user_detail) %></td>
         <td><%= link_to 'Destroy', user_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>

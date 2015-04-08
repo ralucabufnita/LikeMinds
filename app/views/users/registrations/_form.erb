@@ -1,57 +1,73 @@
-<%= form_for(resource, :as => resource_name, :url => user_registration_path()) do |f| %>
-    <div class="col-xs-6">
-      <div class="form-group">
-        <%= f.label :firstName %>
-        <%= f.text_field :firstName, auto_focus: true, class: "form-control" %>
+<%= form_for(resource, :as => resource_name, :url => user_registration_path(), :class => "form") do |f| %>
+    <div class="registration-form">
+      <div class="col-xs-12 padding-bottom">
+        <h3>Registration Form
+        <span class="label label-success">
+      <i class="fa fa-user"></i>
+    </span></h3>
       </div>
-      <div class="form-group">
-        <%= f.label :lastName %>
-        <%= f.text_field :lastName, class: "form-control" %>
+      <div class="col-xs-6">
+        <div class="form-group">
+          <%= f.label :firstName %>
+          <%= f.text_field :firstName, auto_focus: true, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :lastName %>
+          <%= f.text_field :lastName, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :address %>
+          <%= f.text_field :address, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :city %>
+          <%= f.text_field :city, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :state %>
+          <%= f.text_field :state, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :zipCode %>
+          <%= f.text_field :zipCode, class: "form-control" %>
+        </div>
       </div>
-      <div class="form-group">
-        <%= f.label :address %>
-        <%= f.text_field :address, class: "form-control" %>
+      <div class="col-xs-6">
+        <div class="form-group">
+          <%= f.label :phone %>
+          <%= f.text_field :phone, class: "form-control" %>
+        </div>
+        <div class="form-group padding-top-bottom">
+          <label>Upload your profile image</label>
+          <%= f.file_field :avatar %>
+        </div>
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password %>
+          <% if @validatable %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %>
+          <br/>
+          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <div class="row padding-bottom-7"></div>
+          <button type="button" class="btn btn-block btn-primary">
+          Sign in with Facebook
+          <i class="fa fa-facebook-official"></i>
+          </button>
+        </div>
       </div>
-      <div class="form-group">
-        <%= f.label :city %>
-        <%= f.text_field :city, class: "form-control" %>
+      <div class="actions">
+        <%= f.submit "Sign up", class: "form-control" %>
       </div>
-      <div class="form-group">
-        <%= f.label :state %>
-        <%= f.text_field :state, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :zipCode %>
-        <%= f.text_field :zipCode, class: "form-control" %>
-      </div>
-    </div>
-    <div class="col-xs-6">
-      <div class="form-group">
-        <%= f.label :phone %>
-        <%= f.text_field :phone, class: "form-control" %>
-      </div>
-      <div class="form-group padding-top-bottom">
-        <label>Upload your profile image</label>
-        <%= f.file_field :avatar %>
-      </div>
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password %>
-        <% if @validatable %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %>
-        <br/>
-        <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-      </div>
-    </div>
-    <div class="actions">
-      <%= f.submit "Sign up", class: "form-control"  %>
+      <div class="pull-right"><a id="closeBtn">Close</a></div>
     </div>
 <% end %>
