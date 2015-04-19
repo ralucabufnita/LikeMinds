@@ -19,7 +19,7 @@
         <span class="icon-bar"></span>
       </button>
       <% if user_signed_in? %>
-          <%= link_to "Like Minds", dashboard_path(current_user.id), class: "navbar-brand" %>
+          <%= link_to "Like Minds", root_path, class: "navbar-brand" %>
       <% else %>
           <a class="navbar-brand page-scroll" href="#page-top">Like Minds</a>
       <% end %>

@@ -1,9 +1,22 @@
-<%= form_for ([@idea, Interest.new()]) do |f| %>
-    <%= f.hidden_field :idea_id %>
-    <%= f.hidden_field :user_id %>
-    <%= f.label :Comment %>
-    <%= f.text_area :Comment %>
-    <%= f.label :isInterested %>
-    <%= f.check_box :IsInterested %>
-    <%= f.submit  %>
-<% end %>
+<div class="panel panel-default">
+  <%= form_for ([@idea, Interest.new()]) do |f| %>
+      <%= f.hidden_field :idea_id %>
+      <%= f.hidden_field :user_id %>
+      <div class="panel-heading">
+        <%= f.label :Comment, class: "h3" %>
+      </div>
+      <div class="panel-body">
+        <%= f.text_area :Comment, class: "form-control text_area", rows: "5" %>
+      </div>
+      <div class="panel-footer">
+        <div class="col-xs-6">
+          <label class="label label-success label-with-popover" data-content="We will e-mail the user to let them know" data-title="Great!" >
+               I'm Interested</label>
+          <%= f.check_box :IsInterested %>
+        </div>
+        <div class="col-xs-offset-9">
+          <%= f.submit :class => "btn btn-clear" %>
+        </div>
+      </div>
+  <% end %>
+</div>

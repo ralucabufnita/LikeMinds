@@ -16,8 +16,17 @@ class Idea < ActiveRecord::Base
   :createdDate
   :updatedDate
 
-  def self.search(query)
-    where("title like ?", "%#{query}%")
+  def idea_box
+    :col_number
+    :id
+    :title
+    :category
+    :content
+    :user_id
+  end
+
+  def idea_box=(box)
+    @box = box
   end
 
 end

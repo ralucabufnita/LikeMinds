@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
- <%= image_tag @idea.user.avatar.url(:thumb), class: 'img img-circle' %>
+<%= image_tag @idea.avatar.url(:thumb), class: 'img img-circle' %>
 
 <p>
   <strong>Title:</strong>
@@ -16,38 +16,30 @@
   <strong>Content:</strong>
   <%= @idea.content %>
 </p>
-
 <p>
   <strong>Created Date:</strong>
-  <%= @idea.created_at.to_date%>
+  <%= @idea.created_at.to_date %>
 </p>
-
 <p>
   Last Updated in <%= @difference_in_days %> days ago.
 </p>
-
-
-  <div class="col=xs=6">
+<div class="col=xs=6">
   <i class="fa fa-facebook"></i>
-
-
   <i class="fa fa-linkedin"></i>
-
-
   <i class="fa fa-pinterest"></i>
-
-
   <i class="fa fa-twitter"></i>
-
-
   <i class="fa fa-youtube"></i>
-  </div>
-
-<div class="col-xs-6">
-
-    <%= render "interests/form", collection: @idea %>
-
 </div>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+<div class="col-xs-6">
+  <div class="padding-bottom"></div>
+  <%= render "interests/form", collection: @idea %>
+</div>
+
+<script>
+  $(document).ready(function () {
+
+      $(".label-with-popover").popover({ trigger: "hover" });
+
+  });
+</script>

@@ -20,6 +20,10 @@
       </ul>
     </div>
   </div>
+    <div class="form-group padding-top-bottom">
+      <label>Upload your profile image</label>
+      <%= f.file_field :avatar %>
+    </div>
   <div class="form-group">
     <%= f.label :content %><br>
     <%= f.text_area :content, class: "form-control text_area", rows: "5" %>

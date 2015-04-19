@@ -6,6 +6,7 @@ LikeMinds::Application.routes.draw do
 
   get 'ideas/forum', to: 'ideas#forum'
   get '/user_details/show/:user_id', to: "user_details#show", as: :dashboard
+  get 'search' => 'ideas#search'
 
   post '/ideas/interest', to: 'ideas#interest'
 
@@ -14,7 +15,7 @@ LikeMinds::Application.routes.draw do
    resources :ideas do
      resources :interests
    end
-
+  
   root to: 'home#index'
 
 end

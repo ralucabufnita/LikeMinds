@@ -3,8 +3,19 @@ class IdeasController < ApplicationController
 
   respond_to :html
 
+  def Search
+    search do
+      Ideas.where :name => params[:title]
+    end
+
+    redirect_to "ideas/index"
+  end
+
   def index
     @ideas = Idea.where(user_id: current_user.id)
+
+    @ideas = Idea.paginate(:page => params[:page])
+
     respond_with(@ideas)
   end
 
@@ -22,17 +33,12 @@ class IdeasController < ApplicationController
 
   def forum
     @ideas = Idea.new
-    @ideas = Idea.take(10)
-    respond_with(@ideas)
-  end
+    @ideas = Idea.take(11)
 
-  def search
-    if params[:search]
-      @Ideas = Idea.search(params[:search]).order("created_at DESC")
-    else
-      @Ideas = Idea.all.order('created_at DESC')
+    #render json: @ideasCollection
+    respond_with(@ideas)
+
     end
-  end
 
   def new
     @idea = Idea.new
@@ -68,7 +74,20 @@ class IdeasController < ApplicationController
     end
 
     def idea_params
-      params.require(:idea).permit(:title, :category, :content, :user_id, :createdAt, :updatedAt)
+      params.require(:idea).permit(:title, :category, :content, :user_id, :createdAt, :updatedAt, :avatar)
     end
+
+  def search(&block)
+    if params[:q]
+      @results = yield if block_given?
+
+      respond_to do |format|
+        format.html # resources.html.erb
+        format.json { render json: @results }
+      end
+    else
+      redirect_to root_url, :notice => 'No search query was specified.'
+    end
+  end
 
 end

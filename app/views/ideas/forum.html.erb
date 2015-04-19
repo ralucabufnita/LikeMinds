@@ -1,8 +1,8 @@
 <h1>Browse Ideas</h1>
-    <% @ideas.each do |idea| %>
-      <div class="col-sm-6 col-md-4">
+    <% @ideas.each do |idea |%>
+    <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-          Image Here
+          <% idea.avatar.url(:thumb) %>
           <div class="caption">
             <h4><%= idea.title %></h4>
               <% if (idea.category.blank?) %>
@@ -25,22 +25,7 @@
                 <p><%= idea.content %></p>
             <% end %>
             </p>
-          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          <%= link_to "I'm Interested", idea_path(idea), class: 'btn btn-primary' %>
           </div>
         </div>
-<% end %>
-
-
-
-<section class="post_content">
-  <div class="post_content_inner">
-    <div class="post_title large">
-  <span class="quote">At the end of the day, we can endure much more than we think we can.</span>
-</div>
-    <div class="post_body">
-      <div class="quote_source">
-  —&nbsp;
-  Frida Kahlo</div>
-    </div>
-  </div>
-</section>
+    <% end %>

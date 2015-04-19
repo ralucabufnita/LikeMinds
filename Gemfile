@@ -43,6 +43,7 @@ gem 'rake', '~> 10.4.2'
 gem 'i18n', '~> 0.7.0.beta1'
 gem 'multi_json', '~> 1.11.0'
 gem 'activesupport', '~> 4.2.0'
+gem 'will_paginate', '~> 3.0.6'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
