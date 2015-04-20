@@ -16,5 +16,4 @@ execute "rake assets:precompile" do
   cwd current_release
   command "bundle exec rake assets:precompile"
   environment "RAILS_ENV" => rails_env
-  endclass
-end
+  end
