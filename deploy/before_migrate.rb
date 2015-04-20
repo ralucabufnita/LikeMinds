@@ -12,8 +12,8 @@ node[:deploy].each do |application, deploy|
   end
 end
 
-execute "rake assets:precompile" do
-  cwd current_release
-  command "bundle exec rake assets:precompile"
-  environment "RAILS_ENV" => rails_env
-  end
+# execute "rake assets:precompile" do
+#   cwd current_release
+#   command "bundle exec rake assets:precompile"
+#   environment "RAILS_ENV" => rails_env
+#   end
