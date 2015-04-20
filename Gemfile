@@ -45,11 +45,10 @@ gem 'activesupport', '~> 4.2.0'
 gem 'will_paginate', '~> 3.0.6'
 gem 'unicorn', '~> 4.8.3'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# Use unicorn as the app server
-# gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
