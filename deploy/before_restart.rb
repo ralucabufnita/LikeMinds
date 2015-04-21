@@ -1,1 +1,1 @@
-run "cd /srv/www/likeminds_dev/current && /usr/local/bin/bundle exec rake assets:precompile"
+run "cd /srv/www/likeminds/current && /usr/local/bin/bundle exec rake assets:precompile"
