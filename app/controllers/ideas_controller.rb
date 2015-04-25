@@ -3,14 +3,6 @@ class IdeasController < ApplicationController
 
   respond_to :html
 
-  def Search
-    search do
-      Ideas.where :name => params[:title]
-    end
-
-    redirect_to "ideas/index"
-  end
-
   def index
     @ideas = Idea.where(user_id: current_user.id)
 
@@ -29,6 +21,24 @@ class IdeasController < ApplicationController
     @difference_in_days = (before - now).to_i
 
     respond_with(@idea)
+  end
+
+  def search
+    @ideas = Idea.where(nil)
+    filtering_params(params).each do |key, value|
+      @ideas = ideas.public_send(key,value) if value.present?
+    end
+
+    if @ideas.empty?
+      respond_to do |format|
+        format.json { render json: @ideas }
+      end
+    else
+      flash[:error]
+
+    end
+
+
   end
 
   def forum
@@ -77,17 +87,10 @@ class IdeasController < ApplicationController
       params.require(:idea).permit(:title, :category, :content, :user_id, :createdAt, :updatedAt, :avatar)
     end
 
-  def search(&block)
-    if params[:q]
-      @results = yield if block_given?
-
-      respond_to do |format|
-        format.html # resources.html.erb
-        format.json { render json: @results }
-      end
-    else
-      redirect_to root_url, :notice => 'No search query was specified.'
+    def filtering_params(params)
+      params.slice(:title, :category)
     end
-  end
+
+
 
 end
