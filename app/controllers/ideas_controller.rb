@@ -34,11 +34,8 @@ class IdeasController < ApplicationController
         format.json { render json: @ideas }
       end
     else
-      flash[:error]
-
+      flash[:alert] = "There are no search results for the given criteria"
     end
-
-
   end
 
   def forum
