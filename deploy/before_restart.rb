@@ -3,8 +3,6 @@ Chef::Log.info("Running deploy/before_restart.rb...")
 rails_env = new_resource.environment["RAILS_ENV"]
 Chef::Log.info("Precompiling assets for #{rails_env}...")
 
-current_release = release_path
-
 node[:deploy].each do |application, deploy|
   deploy[:environment_variables].each do |key, value|
     Chef::Log.info("Setting ENV[#{key}] to #{value}")

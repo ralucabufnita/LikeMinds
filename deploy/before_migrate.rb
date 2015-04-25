@@ -1,7 +1,9 @@
 rails_env = new_resource.environment["RAILS_ENV"]
 Chef::Log.info("Precompiling assets for #{rails_env}...")
 
-node[:deploy].each do |application, deploy|
+current_release = release_path
+
+node[:deploy].each do |deploy|
   deploy deploy[:deploy_to] do
     before_restart do
       rails_env = deploy[:rails_env]

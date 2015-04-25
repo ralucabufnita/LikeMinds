@@ -17,8 +17,8 @@ $(document).on 'click', '.hide-text', ->
 
   $(this).parent().prev().html(prevText + '... <a class=show-text>Show More</a>')
 
-$('#searchButton').click ->
-
+$('#searchButton').click (e) ->
+  e.preventDefault()
   data =
     title: title
     category: cateogry
