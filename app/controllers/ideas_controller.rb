@@ -4,7 +4,11 @@ class IdeasController < ApplicationController
   respond_to :html
 
   def index
-    @ideas = Idea.where(user_id: current_user.id)
+    if not params[:title].nil?
+      @ideas = Idea.search(params[:title]).order("created_at DESC")
+    else
+      @ideas = Idea.where(user_id: current_user.id)
+    end if
 
     @ideas = Idea.paginate(:page => params[:page])
 
@@ -24,15 +28,9 @@ class IdeasController < ApplicationController
   end
 
   def search
-    @ideas = Idea.where(nil)
-    filtering_params(params).each do |key, value|
-      @ideas = ideas.public_send(key,value) if value.present?
-    end
 
-    if @ideas.empty?
-      respond_to do |format|
-        format.json { render json: @ideas }
-      end
+    if not @ideas.empty?
+      respond_with(@ideas)
     else
       flash[:alert] = "There are no search results for the given criteria"
     end
@@ -82,10 +80,6 @@ class IdeasController < ApplicationController
 
     def idea_params
       params.require(:idea).permit(:title, :category, :content, :user_id, :createdAt, :updatedAt, :avatar)
-    end
-
-    def filtering_params(params)
-      params.slice(:title, :category)
     end
 
 

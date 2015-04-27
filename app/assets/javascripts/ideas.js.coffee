@@ -17,16 +17,16 @@ $(document).on 'click', '.hide-text', ->
 
   $(this).parent().prev().html(prevText + '... <a class=show-text>Show More</a>')
 
-$('#searchButton').click (e) ->
-  e.preventDefault()
-  data =
-    title: title
-    category: cateogry
-  $.ajax ->
-    url: 'ideas/search'
-    data: data
-    cache: false
-    success: (data) ->
-      console.log data
-    error: (XMLHttpRequest, textStatus, errorThrown) ->
-      console.log errorThrown
+#$('#searchButton').click (e) ->
+#  e.preventDefault()
+#  data =
+#    title: title
+#    category: cateogry
+#  $.ajax ->
+#    url: 'ideas/search'
+#    data: data
+#    cache: false
+#    success: (data) ->
+#      console.log data
+#    error: (XMLHttpRequest, textStatus, errorThrown) ->
+#      console.log errorThrown

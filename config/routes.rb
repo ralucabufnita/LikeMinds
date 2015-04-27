@@ -5,6 +5,7 @@ LikeMinds::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => "users/registrations"}
 
   get 'ideas/forum', to: 'ideas#forum'
+  #get 'ideas', to: 'ideas#search'
   get '/user_details/show/:user_id', to: "user_details#show", as: :dashboard
 
   post '/ideas/interest', to: 'ideas#interest'
