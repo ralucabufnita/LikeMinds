@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d10fcb01-448a-43b7-b85f-d8edfe60a71a" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/LikeMinds.iml" afterPath="$PROJECT_DIR$/.idea/LikeMinds.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LikeMinds.iws" />
@@ -48,8 +48,8 @@
       <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1904762" vertical-offset="0" max-vertical-offset="945">
-              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="945">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -226,7 +226,7 @@
     <property name="SearchEverywhereHistoryKey" value="gemfile&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/Gemfile&#10;production&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/config/environments/production.rb&#10;idea&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/models/idea.rb&#10;gem&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/Gemfile&#10;route&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/config/routes.rb&#10;forum&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/ideas/forum.html.erb&#10;gemf&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/Gemfile&#10;show&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/ideas/show.html.erb&#10;AddAvat&#9;null&#9;null&#10;form&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/users/registrations/_form.erb&#10;_form&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/ideas/_form.html.erb&#10;for&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/ideas/forum.html.erb&#10;routes&#9;null&#9;null&#10;user&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/controllers/user_details_controller.rb&#10;home&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/assets/stylesheets/home.css.scss&#10;ideas&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/assets/stylesheets/ideas.css.scss&#10;reg&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/controllers/users/registrations_controller.rb&#10;regi&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/controllers/users/registrations_controller.rb&#10;login&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/users/registrations/_login_modal.html.erb&#10;test.log&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/log/test.log&#10;develop&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/log/development.log&#10;app&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/layouts/application.html.erb&#10;index&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/home/index.html.erb&#10;devise&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/config/initializers/devise.rb&#10;development.&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/log/development.log&#10;appli&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/controllers/application_controller.rb&#10;rout&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/config/routes.rb&#10;application.html&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/layouts/application.html.erb&#10;application_&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/controllers/application_controller.rb&#10;applic&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/config/application.rb&#10;devi&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/config/initializers/devise.rb&#10;application&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/controllers/application_controller.rb&#10;user_detail&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/models/user_detail.rb&#10;user_&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/models/user_detail.rb&#10;interest&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/models/interest.rb&#10;category&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/models/category.rb&#10;user_det&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/models/user_detail.rb&#10;ideas_c&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/controllers/ideas_controller.rb&#10;inter&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/models/interest.rb&#10;ideas/new&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/ideas/new.html.erb&#10;home.&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/assets/stylesheets/home.css.scss&#10;appl&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/assets/stylesheets/application.css.sass&#10;foru&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/ideas/forum.html.erb&#10;deve&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/config/environments/development.rb&#10;ro&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/config/routes.rb&#10;search&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/ideas/_search.html.erb&#10;scrollin&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/assets/stylesheets/scrolling-nav.css&#10;edit&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/views/devise/registrations/edit.html.erb&#10;idea_con&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/controllers/ideas_controller.rb&#10;authoriza&#9;FILE&#9;file:///Users/josephcarlson/Sites/LikeMinds/app/models/authorization.rb" />
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesRHTML" value="false" />
-    <property name="options.lastSelected" value="appearance" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -490,21 +490,21 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5155367" sideWeight="0.49872556" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32768363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935324" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20762712" sideWeight="0.5012744" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32768363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19031435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.4995752" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20762712" sideWeight="0.5012744" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32627118" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -929,8 +929,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1904762" vertical-offset="0" max-vertical-offset="945">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="945">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
