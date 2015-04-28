@@ -14,7 +14,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'devise', '~> 3.4.0'   # or later
+gem 'devise', '~> 3.4.0'   # or latergit
 gem 'gravatar_image_tag'
 gem "paperclip", "~> 4.2"
 gem 'bootstrap-sass', '~> 3.3.3'
