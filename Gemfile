@@ -10,6 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'nokogiri'
 gem 'devise', '~> 3.4.0'   # or latergit
+gem "therubyracer"
+gem "execjs"
 gem 'gravatar_image_tag'
 gem "paperclip", "~> 4.2"
 gem 'bootstrap-sass', '~> 3.3.3'
